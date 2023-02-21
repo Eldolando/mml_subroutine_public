@@ -2461,8 +2461,10 @@ C     [3] STABLE COMPONENT: EFFECTIVE STRESS OF YIELD_FUNCTION
       CALL YLD(SIG, DEV_SIG, PHI, 1)
 C     [3] FLUCTUATION COMPONENT: TRUNCATION COMPONENT
 C     [3.1] F-FUNCTION
-      F1=DSQRT(3.D0/8.D0)*((1.D0/(G(1)**QM)-1.D0)**(1.D0/QM))
-      F2=DSQRT(3.D0/8.D0)*((1.D0/(G(2)**QM)-1.D0)**(1.D0/QM))
+C      F1=DSQRT(3.D0/8.D0)*((1.D0/(G(1)**QM)-1.D0)**(1.D0/QM))
+C      F2=DSQRT(3.D0/8.D0)*((1.D0/(G(2)**QM)-1.D0)**(1.D0/QM))
+      F1=(1.D0/(G(1)**QM)-1.D0)**(1.D0/QM)
+      F2=(1.D0/(G(2)**QM)-1.D0)**(1.D0/QM)
 C     [3.1] FLUCTUATING COMPONENT: ¥Õ_H
       PHI_H1= F1*DABS(DEV_SH-DABS(DEV_SH))
       PHI_H2= F2*DABS(DEV_SH+DABS(DEV_SH))
@@ -2598,8 +2600,10 @@ C     [3] STABLE COMPONENT
 C-----------------------------------------------------------------------
 C     [4] FLUCTUATION COMPONENT: TRUNCATION COMPONENT
 C     [4.1] F-FUNCTION
-      F1=DSQRT(3.D0/8.D0)*((1.D0/(G(1)**QM)-1.D0)**(1.D0/QM))
-      F2=DSQRT(3.D0/8.D0)*((1.D0/(G(2)**QM)-1.D0)**(1.D0/QM))
+C      F1=DSQRT(3.D0/8.D0)*((1.D0/(G(1)**QM)-1.D0)**(1.D0/QM))
+C      F2=DSQRT(3.D0/8.D0)*((1.D0/(G(2)**QM)-1.D0)**(1.D0/QM))
+      F1=(1.D0/(G(1)**QM)-1.D0)**(1.D0/QM)
+      F2=(1.D0/(G(2)**QM)-1.D0)**(1.D0/QM)
 C     [4.1] FLUCTUATING COMPONENT: ¥Õ_H
       PHI_H1= F1*DABS(DEV_SH-DABS(DEV_SH))
       PHI_H2= F2*DABS(DEV_SH+DABS(DEV_SH))
